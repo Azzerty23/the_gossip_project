@@ -17,7 +17,7 @@ class HomeController < ApplicationController
 
   def create
     u = User.create(first_name: params["gossip_author"])
-    Gossip.create(author: u ,content: params["gossip_content"])
+    Gossip.create(author: u, title: params['gossip_title'], content: params["gossip_content"])
     redirect_to '/'
   end
 end
