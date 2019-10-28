@@ -1,12 +1,11 @@
 <%= render "shared/navbar" %>
 <br>
-<h3>Voici le potin détaillé :</h3><br>
-<strong>Nom de l'auteur :</strong><br>
-<%= @gossip.author.first_name %> | <%= link_to "Voir", user_id_path(@gossip.author.id)%>
-<br>
-<strong>Titre du gossip :</strong><br>
-<%= @gossip.title %><br>
-<strong>Le gossip :</strong><br>
-<%= @gossip.content %><br>
-<strong>Date de création :</strong><br>
-<%= @gossip.created_at.strftime("%d/%m/%Y %H:%M:%S") %><br>
+<h4>Voici le gossip n°<%=@gossip.id%> :</h4><br>
+<strong>-  Nom de l'auteur :</strong><br>
+<ul><%= @gossip.author.first_name %> | <%= link_to "Voir", user_id_path(@gossip.author.id)%></ul>
+<strong>-  Titre du gossip :</strong><br>
+<ul><%= @gossip.title %></ul>
+<strong>- Le gossip :</strong><br>
+<ul><%= @gossip.content %></ul>
+<strong>-  Date de création :</strong><br>
+<ul><%= @gossip.created_at.strftime("%d/%m/%Y %H:%M:%S") %><br></ul>

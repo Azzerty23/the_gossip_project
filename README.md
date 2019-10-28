@@ -9,4 +9,7 @@ Start:
 - `$ rails db:seed`
 - `$ rails server`
 
+Go to: 
+- `localhost:3000`
+
 ### Made in Montpellier
