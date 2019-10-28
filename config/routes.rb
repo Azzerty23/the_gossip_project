@@ -8,4 +8,6 @@ Rails.application.routes.draw do
 
   get "/:firstname", to: "home#index"
 
+  get "/new_gossips", to: "home#new"
+
 end
