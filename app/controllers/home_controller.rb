@@ -21,7 +21,9 @@ class HomeController < ApplicationController
     redirect_to '/'
   end
 
-  def gossip
+  def show
+    @id = params["id"]
+    @gossip = Gossip.find(@id)
   end
-  
+
 end
