@@ -1,8 +1,12 @@
 <%= render "shared/navbar" %>
 
-<h1>Bienvenue <%= @firstname %> !</h1>
+<h1>Bienvenue <%= @firstname %> sur The Gossip Project !</h1>
 
-<h3>Voici la liste des gossips !</h3>
+<h3>Voici la liste des gossips !</h3><br>
+
+<%= link_to "--> Si tu veux créer un gossip <--", new_gossips_path %><br>
+<%= link_to "--> Voir les auteurs <--", user_path %><br><br>
+<ul>
 
 <div class="card-columns">
 <% @gossips.each do |gossip| %>
@@ -18,5 +22,3 @@
     </div>
 </div>
 <% end %>
-</div>
-<%= link_to "--> Si tu veux créer un gossip <--", new_gossips_path %>

@@ -1,13 +1,11 @@
 <%= render "shared/navbar" %>
+<br>
+<h2>Auteur <%= @user.first_name %> </h2><br>
 
-<h1>Bienvenue <%= @user.first_name %> !</h1>
-
-<h3>Tu as créé <%= @user.gossips.count %> gossips : </h3>
+<h3>L'auteur a créé <%= @user.gossips.count %> gossips : </h3><br>
 
 <% @gossips.each do |gossip| %>
 <li> <strong> <%= gossip.title %> </strong> : <%= gossip.content %> </li>
-<% end %>
+<% end %><br>
 
 <h3>Le dernier date du <%= @user.gossips.last.created_at.strftime("%d/%m/%Y") %> </h3>
-
-<%= link_to "--> Si tu veux créer un gossip <--", new_gossips_path %>
