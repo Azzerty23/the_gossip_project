@@ -1,12 +1,11 @@
 <%= render "shared/navbar" %>
-
+<br>
 <h1>Bienvenue <%= @firstname %> sur The Gossip Project !</h1>
-
+<br>
 <h3>Voici la liste des gossips !</h3><br>
 
-<%= link_to "--> Si tu veux créer un gossip <--", new_gossips_path %><br>
-<%= link_to "--> Voir les auteurs <--", user_path %><br><br>
-<ul>
+<p> <%= link_to "--> Si tu veux créer un gossip <--", new_gossips_path %><br> </p>
+<p> <%= link_to "--> Voir les auteurs <--", user_path %><br><br> </p>
 
 <div class="card-columns">
 <% @gossips.each do |gossip| %>
@@ -16,7 +15,7 @@
       <p class="card-text"> <%= gossip.content %> </p>
       <footer class="blockquote-footer">
         <small class="text-muted">
-          <%= gossip.author.first_name %> <cite title="Source Title"><%= link_to "voir détails", gossip_path(gossip) %></cite>
+          <%= gossip.author.first_name %> <cite title="Détails du gossip"><%= link_to "voir détails", gossip_path(gossip) %></cite>
         </small>
       </footer>
     </div>
