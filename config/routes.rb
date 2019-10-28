@@ -6,8 +6,8 @@ Rails.application.routes.draw do
 
   get "/contact", to: "home#contact"
 
-  get "/:firstname", to: "home#index"
-
   get "/new_gossips", to: "home#new"
+
+  get "/:firstname", to: "home#index"
 
 end
