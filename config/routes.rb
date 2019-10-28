@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   get "/user", to: "user#index"
   
-  get "/user/:id", to: "user#show", as: "user"
+  get "/user/:id", to: "user#show", as: "user_id"
 
   get "/:firstname", to: "home#index"
 
