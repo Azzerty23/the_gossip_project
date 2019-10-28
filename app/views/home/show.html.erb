@@ -2,10 +2,9 @@
 <br>
 <h3>Voici le potin détaillé :</h3><br>
 <strong>Nom de l'auteur :</strong><br>
-<%= @gossip.author.first_name %><br>
+<%= @gossip.author.first_name %> | <%= link_to "Voir", user_id_path(@gossip.author.id)%>
+<br>
 <strong>Titre du gossip :</strong><br>
 <%= @gossip.title %><br>
 <strong>Le gossip :</strong><br>
 <%= @gossip.content %><br>
-
-<%= link_to "Voir l'auteur", user_id_path(@gossip.author.id)%>

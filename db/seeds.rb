@@ -13,10 +13,11 @@ user_array = []
   u = User.create!(first_name: Faker::Name.first_name)
   user_array << u
 end
-
+puts "10 User crées"
 gossip_array = []
 50.times do
   g = Gossip.create!(title: Faker::Lorem.sentence(word_count: 2, supplemental: false, random_words_to_add: 4),
                 content: Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 1),
                 author: user_array.sample)
 end
+puts "50 Gossip crées"
