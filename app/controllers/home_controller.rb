@@ -20,10 +20,13 @@ class HomeController < ApplicationController
     Gossip.create(author: u, title: params['gossip_title'], content: params["gossip_content"])
     redirect_to '/'
   end
+<<<<<<< HEAD
 
   def show
     @id = params["id"]
     @gossip = Gossip.find(@id)
   end
 
+=======
+>>>>>>> 0d8dce22e227b2a289124e2a00cb97cb7ff0f4ab
 end

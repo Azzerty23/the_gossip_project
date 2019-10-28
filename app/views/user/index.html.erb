@@ -1,0 +1,10 @@
+<%= render "shared/navbar" %>
+
+<h3>Voici la liste des users !</h3>
+
+<ul>
+<% @users.each do |user| %>
+<li> <strong> <%= user.first_name %> </strong> : <%= user.gossips.count %> gossips créés </li>
+<% end %>
+</ul>
+<%= link_to "--> Si tu veux créer un gossip <--", new_gossips_path %>
