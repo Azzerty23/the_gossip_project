@@ -8,3 +8,4 @@
 <strong>Le gossip :</strong><br>
 <%= @gossip.content %><br>
 
+<%= link_to "Voir l'auteur", user_id_path(@gossip.author.id)%>

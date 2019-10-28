@@ -1,12 +1,15 @@
 <%= render "shared/navbar" %>
 
-<h1>Bienvenue <%= @firstname %> !</h1>
+<h1>Bienvenue <%= @firstname %> sur The Gossip Project !</h1>
 
-<h3>Voici la liste des gossips !</h3>
+<h3>Voici la liste des gossips !</h3><br>
 
+<%= link_to "--> Si tu veux créer un gossip <--", new_gossips_path %><br>
+<%= link_to "--> Voir les auteurs <--", user_path %><br><br>
 <ul>
 <% @gossips.each do |gossip| %>
 <li> <strong> <%= gossip.author.first_name %> </strong> : <%= gossip.title %> <%= link_to "Voir", gossip_path(gossip) %> </li>
 <% end %>
 </ul>
-<%= link_to "--> Si tu veux créer un gossip <--", new_gossips_path %>
+<%= link_to "--> Voir les auteurs <--", user_path %><br>
+<%= link_to "--> Si tu veux créer un gossip <--", new_gossips_path %><br><br>

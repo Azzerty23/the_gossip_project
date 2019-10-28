@@ -9,5 +9,3 @@
 <% end %>
 
 <h3>Le dernier date du <%= @user.gossips.last.created_at.strftime("%d/%m/%Y") %> </h3>
-
-<%= link_to "--> Si tu veux créer un gossip <--", new_gossips_path %>
