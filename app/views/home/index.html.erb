@@ -4,9 +4,19 @@
 
 <h3>Voici la liste des gossips !</h3>
 
-<ul>
+<div class="card-columns">
 <% @gossips.each do |gossip| %>
-<li> <strong> <%= gossip.author.first_name %> </strong> : <%= gossip.title %> <%= link_to "Voir", gossip_path(gossip) %> </li>
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title"> <%= gossip.title %> </h5>
+      <p class="card-text"> <%= gossip.content %> </p>
+      <footer class="blockquote-footer">
+        <small class="text-muted">
+          <%= gossip.author.first_name %> <cite title="Source Title"><%= link_to "voir détails", gossip_path(gossip) %></cite>
+        </small>
+      </footer>
+    </div>
+</div>
 <% end %>
-</ul>
+</div>
 <%= link_to "--> Si tu veux créer un gossip <--", new_gossips_path %>
