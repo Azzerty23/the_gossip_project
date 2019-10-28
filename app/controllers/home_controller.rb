@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  skip_before_action :verify_authenticity_token, :only => [:index, :show]
+  skip_before_action :verify_authenticity_token, :only => [:index, :show, :new, :create]
 
   def index
     @firstname = params["firstname"]
@@ -13,8 +13,9 @@ class HomeController < ApplicationController
   end
 
   def new
-    @gossip.author = params["gossip_author"]
-    @gossip.content = parrams["gossip_content"]
+  end
+
+  def create
   end
 
 end
