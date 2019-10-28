@@ -1,12 +1,12 @@
-<h1>The Gossip Project</h1>
-<h3>Project.THP by Augustin de Louvencourt & Mariolle Thibault</h3>
+# The Gossip Project
+### Project.THP by Augustin de Louvencourt & Mariolle Thibault
 
 * Ruby version '2.5.1'
 * Rails version '5.2.3'
 
 Start:
-<p>$ rails db:migrarte<br>
-$ rails db:seed<br>
-$ rails server</p>
+- `$ rails db:migrate`
+- `$ rails db:seed`
+- `$ rails server`
 
-<h4>Made in Montpellier</h4>
+### Made in Montpellier
