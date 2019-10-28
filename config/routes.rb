@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   post "/new_gossips", to: "home#create"
 
+  get "/gossip", to: "home#gossip"
+
   get "/:firstname", to: "home#index"
 
 end

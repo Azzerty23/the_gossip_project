@@ -20,4 +20,8 @@ class HomeController < ApplicationController
     Gossip.create(author: u ,content: params["gossip_content"])
     redirect_to '/'
   end
+
+  def gossip
+  end
+  
 end
