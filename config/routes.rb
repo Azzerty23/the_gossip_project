@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   post "/new_gossips", to: "home#create"
 
+  get "/gossip/:id", to: "home#show", as: "gossip"
+
   get "/user", to: "user#index"
   
   get "/user/:id", to: "user#show", as: "user"
