@@ -12,6 +12,8 @@ class HomeController < ApplicationController
   end
 
   def new
+    @gossip.author = params["gossip_author"]
+    @gossip.content = parrams["gossip_content"]
   end
 
 end
