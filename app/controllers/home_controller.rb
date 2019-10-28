@@ -6,6 +6,9 @@ class HomeController < ApplicationController
     puts "INDEX !"
     puts "$" * 22
     puts
+
+    @firstname = params["firstname"]
+
   end
 
   def team
